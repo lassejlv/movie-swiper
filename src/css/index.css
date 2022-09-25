@@ -7,10 +7,48 @@
 
 :root {
   --light: #eeeeee;
-  --bg: #555;
+  --bg: #333;
+  --blue: #5767c8;
 }
 
-* {
+body {
   background: var(--bg);
   color: var(--light);
+}
+
+/* Utils Classes */
+.hidden {
+  /* visibility: hidden; */
+  display: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header img {
+  width: 12rem;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 20px 110px var(--blue));
+}
+
+header #header-movies-buttons {
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+  padding: 11px 11px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--light);
+  color: #101010;
 }
