@@ -8,6 +8,10 @@ const RANDOM = Math.floor(Math.random() * 1000000000);
 
 const findToken = localStorage.getItem(`${LOCAL_PREFIX}token`);
 
+if (findToken) {
+  window.location.href = "/app";
+}
+
 // Start the token process
 GetStarted.addEventListener("click", () => {
   if (findToken) {
