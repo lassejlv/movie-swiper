@@ -22,8 +22,15 @@ GetStarted.addEventListener("click", () => {
     alert("You already have joined!");
   } else {
     const name = prompt("What is your name?");
+
+    if (!name) {
+      set("name", `user-${RANDOM}`);
+    } else {
+      set("name", name);
+    }
+
     set("token", RANDOM);
-    set("name", name);
+
     set("createdAt", new Date().toISOString().split("T")[0]);
 
     window.location.reload();
@@ -32,7 +39,7 @@ GetStarted.addEventListener("click", () => {
 
 // Delete the users token
 Logout.addEventListener("click", () => {
-  del("toke");
+  del("token");
   del("name");
   del("createdAt");
   window.location.reload();
