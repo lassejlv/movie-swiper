@@ -9,6 +9,7 @@
   --light: #eeeeee;
   --bg: #333;
   --blue: #5767c8;
+  --red: #e34040;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 /* Header */
-header {
+.center {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -51,4 +52,9 @@ header #header-movies-buttons {
 .btn-primary {
   background: var(--light);
   color: #101010;
+}
+
+.btn-danger {
+  background: var(--red);
+  color: var(--light);
 }
