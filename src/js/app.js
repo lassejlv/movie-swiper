@@ -34,7 +34,9 @@ fetch("/names.json")
   .then((data) => {
     const item = data[Math.floor(Math.random() * data.length)];
 
-    fetch(url + `/?t=${item}&y=2020&apikey=${key}`)
+    console.log(item);
+
+    fetch(url + `/?t=${item}&apikey=${key}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.Response === "False") {
@@ -70,7 +72,22 @@ fetch("/names.json")
           window.location.reload();
         });
 
-        console.log(data);
+        LOVE_BOX.addEventListener("click", () => {
+          const item = {
+            id: data.imdbID,
+          };
+          let items = [];
+          if (localStorage.getItem(LOCAL_PREFIX + "loves") === null) {
+            items.push(item);
+            localStorage.setItem(LOCAL_PREFIX + "loves", JSON.stringify(items));
+          } else {
+            items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + "loves"));
+            items.push(item);
+            localStorage.setItem(LOCAL_PREFIX + "loves", JSON.stringify(items));
+          }
+
+          window.location.reload();
+        });
       })
       .catch((err) => {
         console.log(err.message);
