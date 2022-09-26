@@ -10,6 +10,8 @@
   --light-darker: #cfcece;
   --bg: #222;
   --blue: #5767c8;
+  --light-blue: #40a8e3;
+  --green: #7fe789;
   --red: #e34040;
   --red-darker: #d93d3d;
 }
@@ -80,4 +82,73 @@ header #header-movies-buttons {
 
 .btn-danger:hover {
   background: var(--red-darker);
+}
+
+/* App Page */
+#movies-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  background: var(--light);
+}
+
+#movies-navbar img {
+  width: 2.4rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#movies-navbar #movies-logout {
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: var(--red);
+}
+
+/* The random movie */
+#movies-random {
+  height: 80vh !important;
+  text-align: center !important;
+}
+
+#movies-random img {
+  width: 8rem;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#movies-random #movies-random-title {
+  font-weight: 800 !important;
+}
+
+#movies-random #movies-random-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: #dad5d5;
+  margin-bottom: 10px;
+}
+
+/* Boxes */
+.movies-random-box {
+  border: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 7px;
+  color: var(--light);
+}
+
+.box-delete {
+  background: var(--red);
+}
+
+.box-love {
+  background: var(--light-blue);
+}
+
+.box-return {
+  background: var(--green);
 }
