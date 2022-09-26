@@ -15,3 +15,31 @@ Logout.addEventListener("click", () => {
   del("createdAt");
   window.location.reload();
 });
+
+// Fetch Movies
+const Image = document.getElementById("movies-random-img");
+const Title = document.getElementById("movies-random-title");
+const Description = document.getElementById("movies-random-description");
+
+const url = "https://www.omdbapi.com";
+const key = "5ad01f87";
+
+fetch("/names.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const item = data[Math.floor(Math.random() * data.length)];
+
+    fetch(url + `/?t=${item}&y=2020&apikey=${key}`)
+      .then((res) => res.json())
+      .then((data) => {
+        Image.src = data.Poster;
+        Title.innerText = data.Title;
+        Description.innerText = data.Plot;
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });

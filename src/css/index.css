@@ -137,7 +137,7 @@ header #header-movies-buttons {
   border: none;
   cursor: pointer;
   padding: 10px 12px;
-  border-radius: 7px;
+  border-radius: 5px;
   color: var(--light);
 }
 
