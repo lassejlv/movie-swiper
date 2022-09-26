@@ -27,7 +27,8 @@ const Title = document.getElementById("movies-random-title");
 const Description = document.getElementById("movies-random-description");
 
 const url = "https://www.omdbapi.com";
-const key = "5ad01f87";
+const keys = ["5ad01f87", "4ce8bb43", "fef1099", "d99ca822"];
+let key = keys[Math.floor(Math.random() * keys.length)];
 
 fetch("/names.json")
   .then((res) => res.json())
@@ -48,6 +49,8 @@ fetch("/names.json")
           Title.innerText = data.Title;
           Description.innerText = data.Plot;
         }
+
+        console.log(data);
 
         RETRUN_BOX.addEventListener("click", () => {
           const item = {
