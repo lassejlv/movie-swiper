@@ -6,34 +6,40 @@ const Main = document.getElementById("main");
 const LOCAL_PREFIX = "movie-finder-";
 const RANDOM = Math.floor(Math.random() * 1000000000);
 
-const find = localStorage.getItem("token");
+const findToken = localStorage.getItem(`${LOCAL_PREFIX}token`);
 
 function set(name, value) {
-  localStorage.setItem(name, `${LOCAL_PREFIX}${value}`);
+  localStorage.setItem(`${LOCAL_PREFIX}${name}`, value);
 }
 
 function del(name) {
-  localStorage.removeItem(name);
+  localStorage.removeItem(`${LOCAL_PREFIX}${name}`);
 }
 
 // Start the token process
 GetStarted.addEventListener("click", () => {
-  if (find) {
+  if (findToken) {
     alert("You already have joined!");
   } else {
-    set("token", `${RANDOM}`);
+    const name = prompt("What is your name?");
+    set("token", RANDOM);
+    set("name", name);
+    set("createdAt", new Date().toISOString().split("T")[0]);
+
     window.location.reload();
   }
 });
 
 // Delete the users token
 Logout.addEventListener("click", () => {
-  del("token");
+  del("toke");
+  del("name");
+  del("createdAt");
   window.location.reload();
 });
 
 // The users has a token
-if (find) {
+if (findToken) {
   Header.remove();
 } else {
   Main.remove();

@@ -7,9 +7,11 @@
 
 :root {
   --light: #eeeeee;
-  --bg: #333;
+  --light-darker: #cfcece;
+  --bg: #222;
   --blue: #5767c8;
   --red: #e34040;
+  --red-darker: #d93d3d;
 }
 
 body {
@@ -21,6 +23,10 @@ body {
 .hidden {
   /* visibility: hidden; */
   display: none;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* Header */
@@ -45,8 +51,17 @@ header #header-movies-buttons {
 
 /* Buttons */
 .btn {
-  padding: 11px 11px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 5px;
+  background: none;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--blue);
 }
 
 .btn-primary {
@@ -54,7 +69,15 @@ header #header-movies-buttons {
   color: #101010;
 }
 
+.btn-primary:hover {
+  background: var(--light-darker);
+}
+
 .btn-danger {
   background: var(--red);
   color: var(--light);
+}
+
+.btn-danger:hover {
+  background: var(--red-darker);
 }
