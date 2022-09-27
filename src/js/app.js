@@ -35,6 +35,8 @@ fetch("/names.json")
   .then((data) => {
     const item = data[Math.floor(Math.random() * data.length)];
 
+    console.log(key);
+
     console.log(item);
 
     fetch(url + `/?t=${item}&apikey=${key}`)
