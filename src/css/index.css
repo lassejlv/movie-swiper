@@ -61,6 +61,10 @@ header #header-movies-buttons {
   transition: all 0.2s ease-in-out;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+}
+
 .btn:focus {
   outline: none;
   box-shadow: 0 0 0 0.3rem var(--blue);

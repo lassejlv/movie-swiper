@@ -2,7 +2,7 @@ const GetStarted = document.getElementById("movies-getStarted");
 const Header = document.getElementById("header");
 const Main = document.getElementById("main");
 const App = document.getElementById("app");
-const checkboxNotRobot = document.getElementById("checkboxNotRobot");
+const CheckboxNotRobot = document.getElementById("checkboxNotRobot");
 
 const LOCAL_PREFIX = "movie-finder-";
 const RANDOM = Math.floor(Math.random() * 1000000000);
@@ -15,9 +15,9 @@ if (findToken) {
 
 // Start the token process
 GetStarted.addEventListener("click", () => {
-  if (!checkboxNotRobot.checked) {
-    alert("You have to check the checkbox!'");
-  } else if (checkboxNotRobot.checked) {
+  if (!CheckboxNotRobot.checked) {
+    alert("You are a robot 🤖");
+  } else if (CheckboxNotRobot.checked) {
     if (findToken) {
       window.location.href = "/app";
     } else {
