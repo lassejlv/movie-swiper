@@ -18,7 +18,13 @@ const likes = JSON.parse(localStorage.getItem(`${LOCAL_PREFIX}returns`));
 likes.map((like) => {
   fetch(url + `/?i=${like.id}&apikey=${key}`)
     .then((res) => res.json())
-    .then((data) => console.log(data.Title))
+    .then((data) => {
+      const ul = document.getElementById("ul");
+      const li = document.createElement("li");
+
+      li.innerText = `${data.Title}`;
+      ul.appendChild(li);
+    })
     .catch((err) => {
       console.error(err.message);
     });
