@@ -2,7 +2,7 @@
 name: "Add Movie \U0001F37F"
 about: Suggest an movie(s) for this project.
 title: ''
-labels: ''
+labels: pending
 assignees: lassv
 
 ---
