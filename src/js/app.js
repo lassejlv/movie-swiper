@@ -54,44 +54,29 @@ fetch("/names.json")
 
         console.log(data);
 
-        RETRUN_BOX.addEventListener("click", () => {
+        function save(name) {
           const item = {
             id: data.imdbID,
           };
           let items = [];
-          if (localStorage.getItem(LOCAL_PREFIX + "returns") === null) {
+          if (localStorage.getItem(LOCAL_PREFIX + name) === null) {
             items.push(item);
-            localStorage.setItem(
-              LOCAL_PREFIX + "returns",
-              JSON.stringify(items)
-            );
+            localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
           } else {
-            items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + "returns"));
+            items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + name));
             items.push(item);
-            localStorage.setItem(
-              LOCAL_PREFIX + "returns",
-              JSON.stringify(items)
-            );
+            localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
           }
 
           window.location.reload();
+        }
+
+        RETRUN_BOX.addEventListener("click", () => {
+          save("returns");
         });
 
         LOVE_BOX.addEventListener("click", () => {
-          const item = {
-            id: data.imdbID,
-          };
-          let items = [];
-          if (localStorage.getItem(LOCAL_PREFIX + "loves") === null) {
-            items.push(item);
-            localStorage.setItem(LOCAL_PREFIX + "loves", JSON.stringify(items));
-          } else {
-            items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + "loves"));
-            items.push(item);
-            localStorage.setItem(LOCAL_PREFIX + "loves", JSON.stringify(items));
-          }
-
-          window.location.reload();
+          save("loves");
         });
       })
       .catch((err) => {
