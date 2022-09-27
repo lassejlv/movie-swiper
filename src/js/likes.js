@@ -7,7 +7,19 @@ if (!localStorage.getItem(LOCAL_PREFIX + "token")) {
   window.location.href = "/";
 }
 
+// API information
+const url = "https://www.omdbapi.com";
+const keys = ["5ad01f87", "4ce8bb43", "fef1099", "d99ca822"];
+let key = keys[Math.floor(Math.random() * keys.length)];
+
 // Get the users likes
 const likes = JSON.parse(localStorage.getItem(`${LOCAL_PREFIX}returns`));
 
-console.log(likes);
+likes.map((like) => {
+  fetch(url + `/?i=${like.id}&apikey=${key}`)
+    .then((res) => res.json())
+    .then((data) => console.log(data.Title))
+    .catch((err) => {
+      console.error(err.message);
+    });
+});
