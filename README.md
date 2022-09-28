@@ -59,4 +59,4 @@ Distributed under the MIT License. See [LICENSE](https://github.com/lassv/movie-
 
 ## Credits
 
-[Sarah Villadsen]("https://www.instagram.com/sarah_villadsen") - _Movie names finder_
+[Sarah Villadsen](https://www.instagram.com/sarah_villadsen) - _Movie names finder_
