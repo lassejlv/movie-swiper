@@ -156,3 +156,28 @@ header #header-movies-buttons {
 .box-return {
   background: var(--green);
 }
+
+/* List */
+#list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+#list #ul {
+  list-style: none;
+}
+
+#list #ul li {
+  color: var(--green);
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+#list #ul li:hover {
+  color: var(--light-blue);
+}
