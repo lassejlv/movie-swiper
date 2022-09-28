@@ -55,8 +55,12 @@ fetch("/names.json")
         console.log(data);
 
         function save(name) {
+          // item schema
           const item = {
-            id: data.imdbID,
+            ID: data.imdbID,
+            Title: data.Title,
+            Image: data.Poster,
+            Description: data.Poster,
           };
           let items = [];
           if (localStorage.getItem(LOCAL_PREFIX + name) === null) {
