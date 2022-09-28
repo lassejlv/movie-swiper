@@ -13,16 +13,16 @@
   </p>
 </p>
 
-![Forks](https://img.shields.io/github/forks/lassv/movie-finder?style=social) ![Stargazers](https://img.shields.io/github/stars/lassv/movie-finder?style=social) 
+![Forks](https://img.shields.io/github/forks/lassv/movie-finder?style=social) ![Stargazers](https://img.shields.io/github/stars/lassv/movie-finder?style=social)
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Contributing](#contributing)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Contributing](#contributing)
+- [License](#license)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
@@ -34,10 +34,10 @@ Sometimes when you will see a movie, then you don't know what to see. But by usi
 
 The Movie Finder website is build using:
 
-* HTML
-* CSS
-* Javascript
-* [OMDb API](https://omdbapi.com)
+- HTML
+- CSS
+- Javascript
+- [OMDb API](https://omdbapi.com)
 
 ## Contributing
 
@@ -55,4 +55,8 @@ Distributed under the MIT License. See [LICENSE](https://github.com/lassv/movie-
 
 ## Authors
 
-* **Lasse** - *Vestergaard* - [Lasse](https://github.com/lassv) - *Built Movie Finder*
+- **Lasse** - _Vestergaard_ - [Lasse](https://github.com/lassv) - _Built Movie Finder_
+
+## Credits
+
+[Sarah Villadsen]("https://www.instagram.com/sarah_villadsen") - _Movie names finder_
