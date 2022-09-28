@@ -22,25 +22,30 @@ likes.map((like) => {
   ul.appendChild(li);
 });
 
-const DeleteButton = document.getElementById("delete");
+const deleteBtn = document.getElementsByClassName("delete");
 
-for (let i = 0; i < DeleteButton.length; i++) {
-  DeleteButton[i].addEventListener("click", (e) => {
-    const id = e.target.parentElement.getAttribute("id");
+try {
+  for (let i = 0; i < deleteBtn.length; i++) {
+    deleteBtn[i].addEventListener("click", (e) => {
+      const id = e.target.parentElement.getAttribute("id");
 
-    const items = JSON.parse(localStorage.getItem(`${LOCAL_PREFIX}returns`));
+      const items = JSON.parse(localStorage.getItem(`${LOCAL_PREFIX}returns`));
 
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].id == id) {
-        items.splice(i, 1);
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].id == id) {
+          items.splice(i, 1);
+        }
       }
-    }
-    localStorage.setItem(`${LOCAL_PREFIX}returns`, JSON.stringify(items));
-    e.target.parentElement.remove();
+      localStorage.setItem(`${LOCAL_PREFIX}returns`, JSON.stringify(items));
+      e.target.parentElement.remove();
 
-    window.reload();
-  }),
-    (e) => {
-      alert(e);
-    };
+      window.reload();
+      alert("Vare slettet");
+    }),
+      (e) => {
+        alert("Du har afbrudt");
+      };
+  }
+} catch (error) {
+  console.log(error);
 }

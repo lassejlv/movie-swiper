@@ -57,7 +57,7 @@ fetch("/names.json")
         function save(name) {
           // item schema
           const item = {
-            ID: data.imdbID,
+            id: data.imdbID,
             Title: data.Title,
             Image: data.Poster,
             Description: data.Poster,
