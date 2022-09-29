@@ -12,6 +12,10 @@ const likes = JSON.parse(localStorage.getItem(`${LOCAL_PREFIX}returns`));
 
 console.log(likes);
 
+if (!likes) {
+  console.log("Alle likes will appear here...");
+}
+
 likes.map((like) => {
   const ul = document.getElementById("ul");
   const li = document.createElement("li");
@@ -38,12 +42,9 @@ try {
       }
       localStorage.setItem(`${LOCAL_PREFIX}returns`, JSON.stringify(items));
       e.target.parentElement.remove();
-
-      window.reload();
-      alert("Vare slettet");
     }),
       (e) => {
-        alert("Du har afbrudt");
+        console.log(e);
       };
   }
 } catch (error) {
