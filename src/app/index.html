@@ -21,6 +21,7 @@
         <a href="/app"><img src="../assets/logo.png" /></a>
         <ul>
           <li id="movies-logout">
+            <span id="movies-user-name"></span>
             <i class="fa-solid fa-xl fa-right-from-bracket"></i>
           </li>
         </ul>
@@ -57,13 +58,18 @@
           </button>
         </div>
 
-        <a
-          href="/app/report.html"
-          style="color: var(--red); text-decoration: none; margin-top: 10px"
+        <button
+          style="
+            color: var(--red);
+            margin-top: 10px;
+            background: none;
+            border: none;
+          "
           class="hidden"
           id="report-bug"
-          ><i class="fa-solid fa-triangle-exclamation"></i> Report Movie</a
         >
+          <i class="fa-solid fa-triangle-exclamation"></i> Report Movie
+        </button>
       </div>
     </div>
 

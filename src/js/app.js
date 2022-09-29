@@ -36,9 +36,34 @@ fetch("/names.json")
   .then((data) => {
     const item = data[Math.floor(Math.random() * data.length)];
 
+    function save(name) {
+      // item schema
+      const item = {
+        id: data.imdbID,
+        Title: data.Title,
+        Image: data.Poster,
+        Description: data.Poster,
+      };
+      let items = [];
+      if (localStorage.getItem(LOCAL_PREFIX + name) === null) {
+        items.push(item);
+        localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
+      } else {
+        items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + name));
+        items.push(item);
+        localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
+      }
+
+      window.location.reload();
+    }
+
     console.log(key);
 
     console.log(item);
+
+    Bug.addEventListener("click", () => {
+      window.location.href = `/app/report.html?movie=${item}`;
+    });
 
     fetch(url + `/?t=${item}&apikey=${key}`)
       .then((res) => res.json())
@@ -55,27 +80,6 @@ fetch("/names.json")
         }
 
         console.log(data);
-
-        function save(name) {
-          // item schema
-          const item = {
-            id: data.imdbID,
-            Title: data.Title,
-            Image: data.Poster,
-            Description: data.Poster,
-          };
-          let items = [];
-          if (localStorage.getItem(LOCAL_PREFIX + name) === null) {
-            items.push(item);
-            localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
-          } else {
-            items = JSON.parse(localStorage.getItem(LOCAL_PREFIX + name));
-            items.push(item);
-            localStorage.setItem(LOCAL_PREFIX + name, JSON.stringify(items));
-          }
-
-          window.location.reload();
-        }
 
         RETRUN_BOX.addEventListener("click", () => {
           save("returns");
