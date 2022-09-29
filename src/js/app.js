@@ -1,5 +1,6 @@
 const App = document.getElementById("app");
 const Logout = document.getElementById("movies-logout");
+const Bug = document.getElementById("report-bug");
 
 const LOCAL_PREFIX = "movie-finder-";
 
@@ -46,6 +47,7 @@ fetch("/names.json")
           Image.src = "/assets/error.png";
           Title.innerText = data.Error;
           Description.innerText = "N/A";
+          Bug.classList.remove("hidden");
         } else {
           Image.src = data.Poster || "/assets/error.png";
           Title.innerText = data.Title;
