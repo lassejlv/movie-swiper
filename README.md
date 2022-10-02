@@ -1,13 +1,13 @@
 <br/>
 <p align="center">
   <a href="https://github.com/lassv/movie-finder">
-    <img src="https://movierfinder.netlify.app/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://movierswiper.hypll.org/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Movie Swiper</h3>
 
   <p align="center">
-    🍿 Don't know what to see? Visit movie-finder & find out.
+    🍿 Don't know what to see? Visit movie-swiper & find out.
     <br/>
     <br/>
   </p>
