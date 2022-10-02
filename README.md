@@ -4,7 +4,7 @@
     <img src="https://movierfinder.netlify.app/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Movie Finder</h3>
+  <h3 align="center">Movie Swiper</h3>
 
   <p align="center">
     🍿 Don't know what to see? Visit movie-finder & find out.
@@ -28,11 +28,11 @@
 
 ![Screen Shot](https://i.ibb.co/d7FxY2d/Screenshot-2022-09-27-at-18-48-19.png)
 
-Sometimes when you will see a movie, then you don't know what to see. But by using Movie Finder, you will find an Exciting movie in seconds. Give it a try.
+Sometimes when you will see a movie, then you don't know what to see. But by using Movie Swiper, you will find an Exciting movie in seconds. Give it a try.
 
 ## Built With
 
-The Movie Finder website is build using:
+The Movie Swiper website is build using:
 
 - HTML
 - CSS
@@ -55,7 +55,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/lassv/movie-
 
 ## Authors
 
-- **Lasse** - _Vestergaard_ - [Lasse](https://github.com/lassv) - _Built Movie Finder_
+- **Lasse** - _Vestergaard_ - [Lasse](https://github.com/lassv) - _Built Movie Swiper_
 
 ## Credits
 
