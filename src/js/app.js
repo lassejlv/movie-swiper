@@ -28,7 +28,7 @@ const Title = document.getElementById("movies-random-title");
 const Description = document.getElementById("movies-random-description");
 
 const url = "https://www.omdbapi.com";
-const keys = ["5ad01f87", "4ce8bb43", "fef1099", "d99ca822"];
+const keys = ["5ad01f87", "4ce8bb43", "fef1099", "d99ca822", "f951b03e"];
 let key = keys[Math.floor(Math.random() * keys.length)];
 
 fetch("/names.json")
