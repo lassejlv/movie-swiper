@@ -57,6 +57,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/lassv/movie-
 
 - **Lasse** - _Vestergaard_ - [Lasse](https://github.com/lassv) - _Built Movie Swiper_
 
-## Credits
 
 [Sarah Villadsen](https://www.instagram.com/sarah_villadsen) - _Movie names finder_
